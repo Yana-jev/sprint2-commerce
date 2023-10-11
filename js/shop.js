@@ -63,8 +63,11 @@ var products = [
         type: 'clothes'
     }
 ]
-// Array with products (objects) added directly with push(). Products in this array are repeated.
-var cartList = [];
+
+// => Reminder, it's extremely important that you debug your code. 
+// ** It will save you a lot of time and frustration!
+// ** You'll understand the code better than with console.log(), and you'll also find errors faster. 
+// ** Don't hesitate to seek help from your peers or your mentor if you still struggle with debugging.
 
 // Improved version of cartList. Cart is an array of products (objects), but each one has a quantity field to define its quantity, so these products are not repeated.
 var cart = [];
@@ -74,7 +77,7 @@ var total = 0;
 // Exercise 1
 function buy(id) {
     // 1. Loop for to the array products to get the item to add to cart
-    // 2. Add found product to the cartList array
+    // 2. Add found product to the cart array
 }
 
 // Exercise 2
@@ -102,11 +105,9 @@ function printCart() {
 
 // Exercise 7
 function removeFromCart(id) {
-    // 1. Loop for to the array products to get the item to add to cart
-    // 2. Add found product to the cartList array
+
 }
 
 function open_modal() {
-    console.log("Open Modal");
     printCart();
 }
