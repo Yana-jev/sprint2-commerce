@@ -133,25 +133,26 @@ function calculateTotal() {
     for (let i = 0; i < cart.length; i++) {
         suma += cart[i].price * cart[i].quantity;
     }
+
+   
     console.log(suma)
     return suma;
-
-
+    
 }
+
 
 // Exercise 4
 function applyPromotionsCart() {
     // Apply promotions to each item in the array "cart"
 
-let discountOil = 0.80
-let discountCakeMix = 0.70
+
 
     for (let i = 0; i < cart.length; i++) {
         let product = cart[i];
-        if (product.name === 'Cooking Oil' && product.quantity >= 3) {
-            product.subtotalWithDiscount = product.price * product.quantity * discountOil;
-        } else if (product.name === 'Cake Mix' && product.quantity >= 10) {
-            product.subtotalWithDiscount = product.price * product.quantity * discountCakeMix;
+        if (product.name === 'cooking oil' && product.quantity >= 3) {
+            product.subtotalWithDiscount = product.price * product.quantity * 0.80;
+        } else if (product.name === 'Instant cupcake mixture' && product.quantity >= 10) {
+            product.subtotalWithDiscount = product.price * product.quantity * 0.70;
         } else {
             delete product.subtotalWithDiscount;
         }
@@ -195,8 +196,7 @@ if (totalPriceElement) {
     totalPriceElement.innerHTML = `Total: $${totalPrice.toFixed(2)}`;
 } 
 }
-applyPromotionsCart();
-printCart();
+
 
 
 
