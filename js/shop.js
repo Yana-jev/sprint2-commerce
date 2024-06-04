@@ -161,6 +161,8 @@ function applyPromotionsCart() {
     }
 }
 
+
+
 // Exercise 5
 function printCart() {
 
