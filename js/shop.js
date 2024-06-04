@@ -10,6 +10,7 @@ var products = [
             percent: 20
         }
     },
+    
     {
         id: 2,
         name: 'Pasta',
