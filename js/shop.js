@@ -145,21 +145,21 @@ function calculateTotal() {
 function applyPromotionsCart() {
     // Apply promotions to each item in the array "cart"
 
-
-
     for (let i = 0; i < cart.length; i++) {
         let product = cart[i];
+        let productInfo = products.find(p => p.name === product.name);
+
         if (product.name === 'cooking oil' && product.quantity >= 3) {
-            product.subtotalWithDiscount = product.price * product.quantity * 0.80;
+            let discount = 1 - (productInfo.offer.percent / 100);
+            product.subtotalWithDiscount = product.price * product.quantity * discount;
         } else if (product.name === 'Instant cupcake mixture' && product.quantity >= 10) {
-            product.subtotalWithDiscount = product.price * product.quantity * 0.70;
+            let discount = 1 - (productInfo.offer.percent / 100);
+            product.subtotalWithDiscount = product.price * product.quantity * discount;
         } else {
             delete product.subtotalWithDiscount;
         }
     }
-
 }
-
 
 // Exercise 5
 function printCart() {
