@@ -194,6 +194,7 @@ for (let i = 0; i < cart.length; i++) {
     `
 }
 
+
 const totalPriceElement = document.getElementById('total_price');
 if (totalPriceElement) {
     totalPriceElement.innerHTML = `Total: $${totalPrice.toFixed(2)}`;
